@@ -63,6 +63,47 @@ section h3 {
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #f9f9f9;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.activity-info {
+  flex: 1 1 60%;
+}
+
+.activity-participants {
+  flex: 0 0 38%;
+  min-width: 140px;
+  max-width: 220px;
+  margin-left: 10px;
+  background: #eef2fa;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 0.97em;
+  box-shadow: 0 1px 3px rgba(26, 35, 126, 0.04);
+}
+
+.activity-participants strong {
+  color: #1a237e;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.activity-participants ul {
+  margin: 4px 0 0 16px;
+  padding-left: 0;
+  list-style-type: disc;
+}
+
+.activity-participants li {
+  color: #3949ab;
+  margin-bottom: 2px;
+  word-break: break-all;
+  padding-left: 2px;
 }
 
 .activity-card h4 {
@@ -141,4 +182,17 @@ footer {
   margin-top: 30px;
   padding: 20px;
   color: #666;
+}
+
+/* Responsivo: empilha em telas pequenas */
+@media (max-width: 600px) {
+  .activity-card {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .activity-participants {
+    max-width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
 }
